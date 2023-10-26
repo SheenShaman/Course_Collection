@@ -9,7 +9,7 @@ app_name = UsersConfig.name
 
 
 router = DefaultRouter()
-router.register(r'courses', UserViewSet, basename='courses')
+router.register(r'users', UserViewSet, basename='users')
 
 urlpatterns = [
 
