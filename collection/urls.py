@@ -3,12 +3,12 @@ from django.urls import path
 from collection.apps import CollectionConfig
 from rest_framework.routers import DefaultRouter
 
-from collection.views import (CourseViewSet, LessonCreateAPIView, LessonListAPIView, LessonRetrieveAPIView,
-                              LessonUpdateAPIView, LessonDestroyAPIView,
-                              SubscriptionCreateAPIView, SubscriptionDestroyAPIView)
+from collection.views.views_courses import CourseViewSet
+from collection.views.views_subscriptions import SubscriptionCreateAPIView, SubscriptionDestroyAPIView
+from collection.views.views_lessons import (LessonCreateAPIView, LessonListAPIView, LessonRetrieveAPIView,
+                                            LessonUpdateAPIView, LessonDestroyAPIView)
 
 app_name = CollectionConfig.name
-
 
 router = DefaultRouter()
 router.register(r'courses', CourseViewSet, basename='courses')
