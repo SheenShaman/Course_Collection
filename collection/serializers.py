@@ -6,6 +6,9 @@ from collection.validators import URLValidator
 
 
 class SubscriptionSerializer(serializers.ModelSerializer):
+
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+
     class Meta:
         model = Subscription
         fields = '__all__'

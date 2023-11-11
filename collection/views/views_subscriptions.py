@@ -11,11 +11,6 @@ class SubscriptionCreateAPIView(generics.CreateAPIView):
     serializer_class = SubscriptionSerializer
     permission_classes = [IsAuthenticated | IsModerator | IsOwner]
 
-    def perform_create(self, serializer):
-        new_sub = serializer.save()
-        new_sub.user = self.request.user
-        new_sub.save()
-
 
 class SubscriptionDestroyAPIView(generics.DestroyAPIView):
     serializer_class = SubscriptionSerializer
