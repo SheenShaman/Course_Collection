@@ -1,6 +1,7 @@
 from django.db import models
 from users.models import NULLABLE
 from config import settings
+from django.utils import timezone
 
 
 class Course(models.Model):
@@ -12,6 +13,7 @@ class Course(models.Model):
 
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL,
                               verbose_name='Пользователь', **NULLABLE)
+    last_updated = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return f'{self.title}'
@@ -47,6 +49,8 @@ class Subscription(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name='Курс', **NULLABLE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='Пользователь',
                              **NULLABLE)
+
+    sub_time = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return f'{self.course} {self.user} ({self.is_active})'

@@ -6,7 +6,6 @@ from collection.validators import URLValidator
 
 
 class SubscriptionSerializer(serializers.ModelSerializer):
-
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
 
     class Meta:
@@ -15,7 +14,6 @@ class SubscriptionSerializer(serializers.ModelSerializer):
 
 
 class LessonSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Lesson
         fields = '__all__'
@@ -23,7 +21,6 @@ class LessonSerializer(serializers.ModelSerializer):
 
 
 class CourseCreateSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Course
         fields = '__all__'
