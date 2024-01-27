@@ -19,7 +19,7 @@ Course Collection - проект онлайн-обучения, разработ
 
 Для установки и запуска проекта выполните следующие шаги:
 
-1. Склонируйте репозиторий проекта на свой локальный компьютер git clone _https://github.com/SheenShaman/collection_of_courses_
+1. Склонируйте репозиторий проекта на свой локальный компьютер git clone _https://github.com/SheenShaman/Course_Collection_
 2. Создайте виртуальное окружение _python3 -m venv мyenv_
 3. Активируйте виртуальное окружение _myenv\Scripts\activate_
 4. Установите зависимости _pip install -r requirements.txt_
