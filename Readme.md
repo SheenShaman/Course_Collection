@@ -1,6 +1,6 @@
-# Проект Collection_of_Courses
+# Проект Course Collection
 
-Collection_of_Courses - проект онлайн-обучения, разработанный с использованием фреймворка Django.
+Course Collection - проект онлайн-обучения, разработанный с использованием фреймворка Django.
 
 ## Технологии:
 
